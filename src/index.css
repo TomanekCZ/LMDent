@@ -1052,6 +1052,7 @@ main {
   width: 100%;
   border: 0;
   background: none;
+  color: var(--ink);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -1061,6 +1062,8 @@ main {
   font: inherit;
   padding: 1.05rem 1.12rem;
   transition: background-color 220ms ease;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .faq-button:hover {
