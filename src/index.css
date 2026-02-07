@@ -131,6 +131,16 @@ main {
   color: var(--accent-strong);
 }
 
+.section-kickers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+/* Services intro uses the default centered kicker row. */
+
 .section-intro {
   max-width: 780px;
   margin-inline: auto;
@@ -510,15 +520,11 @@ main {
   margin-bottom: 0;
 }
 
-.hero-wrap {
-  position: relative;
-}
-
 .hero-photo-cta {
   position: absolute;
-  top: calc(100svh - env(safe-area-inset-bottom, 0) - 1.15rem);
+  bottom: calc(env(safe-area-inset-bottom, 0) + 1.15rem);
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translateX(-50%);
   z-index: 3;
   display: flex;
   flex-wrap: wrap;

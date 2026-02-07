@@ -52,12 +52,9 @@ function Services() {
     <section id="service" className="section section-services">
       <div className="container">
         <div className="section-intro animate-on-scroll">
-          <p className="section-kicker">S čím pomáháme</p>
-          <h2>Komplexní péče bez kompromisů</h2>
-          <p>
-            Každé ošetření začíná krátkou diagnostikou a končí doporučením, které dává smysl v běžném životě.
-            Cílem je zdravý chrup, ne jednorázový efekt.
-          </p>
+          <div className="section-kickers" aria-label="Štítky sekce">
+            <p className="section-kicker">S čím pomáháme</p>
+          </div>
         </div>
 
         <div className="services-grid">
