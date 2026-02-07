@@ -147,7 +147,7 @@ function Map() {
                   </span>
                   <strong>Parkování</strong>
                 </div>
-                <p>Parkování je k dispozici přímo před budovou společnosti.</p>
+                <p>Pohodlné parkování je k dispozici přímo před budovou kliniky.</p>
               </div>
             </div>
           </div>

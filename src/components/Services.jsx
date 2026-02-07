@@ -10,8 +10,8 @@ const servicePhotos = [
   },
   {
     img: bleachingB,
-    title: 'Prevence parodontitidy',
-    caption: 'Dásně pod kontrolou dlouhodobě.'
+    title: 'Konzultace a poradenství',
+    caption: 'Jasný plán péče a doporučení na míru.'
   },
   {
     img: bleachingD,
@@ -31,11 +31,11 @@ const services = [
   },
   {
     icon: '02',
-    title: 'Prevence parodontitidy',
-    subtitle: 'včasná diagnostika',
+    title: 'Konzultace a poradenství',
+    subtitle: 'plán péče na míru',
     content:
-      'Cílená péče o dásně, sledování rizikových míst a plán pravidelných recall návštěv pro dlouhodobou stabilitu.',
-    bullets: ['Měření dásňových kapes', 'Subgingivální ošetření PerioFlow', 'Individuální interval návštěv']
+      'Krátká i rozsáhlejší konzultace pro výběr správných pomůcek, nastavení rutiny a řešení citlivosti, krvácení dásní nebo zápachu.',
+    bullets: ['Instruktáž techniky čištění', 'Výběr mezizubních pomůcek', 'Doporučení dalšího postupu']
   },
   {
     icon: '03',
