@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const navLinks = [
   { name: 'Domů', href: '#home', id: 'home' },
@@ -13,6 +13,8 @@ function Header({ onBook }) {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuToggleRef = useRef(null);
+  const navShellRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,6 +49,52 @@ function Header({ onBook }) {
     };
   }, [mobileMenuOpen]);
 
+  useEffect(() => {
+    if (!mobileMenuOpen) return undefined;
+
+    const toggleEl = menuToggleRef.current;
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setMobileMenuOpen(false);
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+
+      const root = navShellRef.current;
+      if (!root) return;
+
+      const focusables = root.querySelectorAll(
+        'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+
+      if (!focusables.length) return;
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      const isShift = event.shiftKey;
+      const active = document.activeElement;
+
+      if (!isShift && active === last) {
+        event.preventDefault();
+        first.focus();
+      } else if (isShift && active === first) {
+        event.preventDefault();
+        last.focus();
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      toggleEl?.focus();
+    };
+  }, [mobileMenuOpen]);
+
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
   };
@@ -64,15 +112,21 @@ function Header({ onBook }) {
             type="button"
             className={`menu-toggle ${mobileMenuOpen ? 'is-open' : ''}`}
             onClick={() => setMobileMenuOpen((value) => !value)}
-            aria-label="Otevřít navigaci"
+            aria-label={mobileMenuOpen ? 'Zavřít navigaci' : 'Otevřít navigaci'}
             aria-expanded={mobileMenuOpen}
+            aria-controls="primary-navigation"
+            ref={menuToggleRef}
           >
             <span />
             <span />
             <span />
           </button>
 
-          <div className={`header-nav-shell ${mobileMenuOpen ? 'is-open' : ''}`}>
+          <div
+            id="primary-navigation"
+            ref={navShellRef}
+            className={`header-nav-shell ${mobileMenuOpen ? 'is-open' : ''}`}
+          >
             <nav aria-label="Hlavní navigace">
               <ul className="header-nav">
                 {navLinks.map((link) => (

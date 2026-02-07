@@ -24,21 +24,6 @@ function Hero({ onBook }) {
               Zobrazit ceník
             </a>
           </div>
-
-          <ul className="hero-stats" aria-label="Hlavní výhody">
-            <li>
-              <strong>Šetrná péče</strong>
-              <span>komfortní průběh ošetření</span>
-            </li>
-            <li>
-              <strong>Děti i dospělí</strong>
-              <span>péče přizpůsobená věku i potřebám</span>
-            </li>
-            <li>
-              <strong>Jasný plán péče</strong>
-              <span>doporučení, která zvládnete doma</span>
-            </li>
-          </ul>
         </div>
 
         <div className="hero-visual animate-on-scroll" style={{ transitionDelay: '120ms' }}>
@@ -50,6 +35,25 @@ function Hero({ onBook }) {
 
           {/* Intentionally removed: floating trust card content */}
         </div>
+
+        <ul
+          className="hero-stats animate-on-scroll"
+          aria-label="Hlavní výhody"
+          style={{ transitionDelay: '180ms' }}
+        >
+          <li>
+            <strong>Šetrná péče</strong>
+            <span>komfortní průběh ošetření</span>
+          </li>
+          <li>
+            <strong>Děti i dospělí</strong>
+            <span>péče přizpůsobená věku i potřebám</span>
+          </li>
+          <li>
+            <strong>Jasný plán péče</strong>
+            <span>doporučení, která zvládnete doma</span>
+          </li>
+        </ul>
       </div>
 
       <a href="#service" className="hero-scroll" aria-label="Přejít na služby">
