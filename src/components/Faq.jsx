@@ -29,6 +29,11 @@ const faqData = [
     question: 'Přispívá na dentální hygienu pojišťovna?',
     answer:
       'Většina zdravotních pojišťoven nabízí příspěvky v rámci preventivních programů. Konkrétní výši je potřeba ověřit u vaší pojišťovny.'
+  },
+  {
+    question: 'Kdy je lepší hygienu zrušit?',
+    answer:
+      'Prosíme o zrušení termínu v případě oparu či nemoci z důvodu bezpečnosti Vás, ostatních pacientů i dentálního týmu.'
   }
 ];
 
