@@ -1,14 +1,32 @@
 import heroLeft600 from '../images/optimized/LM_dental_HERO_800.jpg';
 import heroLeft900 from '../images/optimized/LM_dental_HERO_1200.jpg';
+import heroLeft600Webp from '../images/optimized/LM_dental_HERO_800.webp';
+import heroLeft900Webp from '../images/optimized/LM_dental_HERO_1200.webp';
 import heroRight600 from '../images/optimized/LM_dental_HERO2_800.jpg';
 import heroRight900 from '../images/optimized/LM_dental_HERO2_1200.jpg';
+import heroRight600Webp from '../images/optimized/LM_dental_HERO2_800.webp';
+import heroRight900Webp from '../images/optimized/LM_dental_HERO2_1200.webp';
 import heroCenter600 from '../images/optimized/LM_dental_HERO3_800.jpg';
 import heroCenter900 from '../images/optimized/LM_dental_HERO3_1200.jpg';
+import heroCenter600Webp from '../images/optimized/LM_dental_HERO3_800.webp';
+import heroCenter900Webp from '../images/optimized/LM_dental_HERO3_1200.webp';
 
 const heroPhotos = {
-  left: { src: heroLeft600, srcSet: `${heroLeft600} 600w, ${heroLeft900} 900w` },
-  right: { src: heroRight600, srcSet: `${heroRight600} 600w, ${heroRight900} 900w` },
-  center: { src: heroCenter600, srcSet: `${heroCenter600} 600w, ${heroCenter900} 900w` }
+  left: {
+    jpgSrc: heroLeft600,
+    jpgSrcSet: `${heroLeft600} 600w, ${heroLeft900} 900w`,
+    webpSrcSet: `${heroLeft600Webp} 600w, ${heroLeft900Webp} 900w`
+  },
+  right: {
+    jpgSrc: heroRight600,
+    jpgSrcSet: `${heroRight600} 600w, ${heroRight900} 900w`,
+    webpSrcSet: `${heroRight600Webp} 600w, ${heroRight900Webp} 900w`
+  },
+  center: {
+    jpgSrc: heroCenter600,
+    jpgSrcSet: `${heroCenter600} 600w, ${heroCenter900} 900w`,
+    webpSrcSet: `${heroCenter600Webp} 600w, ${heroCenter900Webp} 900w`
+  }
 };
 
 function Hero({ onBook }) {
@@ -18,41 +36,59 @@ function Hero({ onBook }) {
         <div className="hero-collage">
           <div className="hero-triptych" aria-label="Fotky z ordinace">
             <figure className="hero-triptych-photo">
-              <img
-                src={heroPhotos.left.src}
-                srcSet={heroPhotos.left.srcSet}
-                sizes="(max-width: 900px) 33vw, 260px"
-                width="600"
-                height="800"
-                alt="Dentální hygiena v ordinaci"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={heroPhotos.left.webpSrcSet}
+                  sizes="(max-width: 900px) 33vw, 260px"
+                />
+                <source srcSet={heroPhotos.left.jpgSrcSet} sizes="(max-width: 900px) 33vw, 260px" />
+                <img
+                  src={heroPhotos.left.jpgSrc}
+                  width="600"
+                  height="800"
+                  alt="Dentální hygiena v ordinaci"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </figure>
             <figure className="hero-triptych-photo is-center">
-              <img
-                src={heroPhotos.center.src}
-                srcSet={heroPhotos.center.srcSet}
-                sizes="(max-width: 900px) 33vw, 260px"
-                width="600"
-                height="800"
-                alt="Dentální hygiena v ordinaci"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={heroPhotos.center.webpSrcSet}
+                  sizes="(max-width: 900px) 33vw, 260px"
+                />
+                <source srcSet={heroPhotos.center.jpgSrcSet} sizes="(max-width: 900px) 33vw, 260px" />
+                <img
+                  src={heroPhotos.center.jpgSrc}
+                  width="600"
+                  height="800"
+                  alt="Dentální hygiena v ordinaci"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
             </figure>
             <figure className="hero-triptych-photo">
-              <img
-                src={heroPhotos.right.src}
-                srcSet={heroPhotos.right.srcSet}
-                sizes="(max-width: 900px) 33vw, 260px"
-                width="600"
-                height="800"
-                alt="Dentální hygiena v ordinaci"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={heroPhotos.right.webpSrcSet}
+                  sizes="(max-width: 900px) 33vw, 260px"
+                />
+                <source srcSet={heroPhotos.right.jpgSrcSet} sizes="(max-width: 900px) 33vw, 260px" />
+                <img
+                  src={heroPhotos.right.jpgSrc}
+                  width="600"
+                  height="800"
+                  alt="Dentální hygiena v ordinaci"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </figure>
           </div>
         </div>
