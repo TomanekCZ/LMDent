@@ -1,20 +1,23 @@
-import bleachingA from '../images/LM_dental_3.jpeg';
-import bleachingB from '../images/LM_dental_4.jpeg';
-import bleachingD from '../images/LM_dental_6.jpeg';
+import bleachingA600 from '../images/optimized/LM_dental_3_800.jpg';
+import bleachingA900 from '../images/optimized/LM_dental_3_1200.jpg';
+import bleachingB600 from '../images/optimized/LM_dental_4_800.jpg';
+import bleachingB900 from '../images/optimized/LM_dental_4_1200.jpg';
+import bleachingD600 from '../images/optimized/LM_dental_6_800.jpg';
+import bleachingD900 from '../images/optimized/LM_dental_6_1200.jpg';
 
 const servicePhotos = [
   {
-    img: bleachingA,
+    img: { src: bleachingA600, srcSet: `${bleachingA600} 600w, ${bleachingA900} 900w` },
     title: 'Dentální hygiena',
     caption: 'Šetrné čištění, pigmentace a prevence.'
   },
   {
-    img: bleachingB,
+    img: { src: bleachingB600, srcSet: `${bleachingB600} 600w, ${bleachingB900} 900w` },
     title: 'Konzultace a poradenství',
     caption: 'Jasný plán péče a doporučení na míru.'
   },
   {
-    img: bleachingD,
+    img: { src: bleachingD600, srcSet: `${bleachingD600} 600w, ${bleachingD900} 900w` },
     title: 'Bělení zubů',
     caption: 'Bezpečný postup s přirozeným výsledkem.'
   }
@@ -88,7 +91,16 @@ function Services() {
         <section className="services-photo-grid animate-on-scroll" aria-label="Fotogalerie služeb">
           {servicePhotos.map((item) => (
             <article key={item.title} className="photo-card">
-              <img src={item.img} alt={item.title} loading="lazy" />
+              <img
+                src={item.img.src}
+                srcSet={item.img.srcSet}
+                sizes="(max-width: 900px) 90vw, 360px"
+                width="600"
+                height="800"
+                alt={item.title}
+                loading="lazy"
+                decoding="async"
+              />
               <div className="photo-card-overlay" aria-hidden="true" />
               <div className="photo-card-copy">
                 <h3>{item.title}</h3>

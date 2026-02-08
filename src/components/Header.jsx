@@ -107,7 +107,7 @@ function Header({ onBook }) {
       <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
         <div className="container header-inner">
           <a href="#home" className="brand" onClick={closeMobileMenu} aria-label="LM Dental domovská stránka">
-            <img src="/logo.png" alt="LM Dental" className="brand-logo" />
+            <img src="/logo.png" alt="LM Dental" className="brand-logo" width="192" height="128" decoding="async" />
             <span className="brand-copy">Dentální hygiena</span>
           </a>
 

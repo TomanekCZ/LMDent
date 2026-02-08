@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+/* Fonts are loaded via <link> tags in index.html to avoid render-blocking @import. */
 
 :root {
   --font-heading: 'Outfit', sans-serif;
@@ -1064,6 +1064,9 @@ main {
 .atmos-band-bg {
   position: absolute;
   inset: 0;
+  background-image: var(--atmos-band-1x);
+  background-image: -webkit-image-set(var(--atmos-band-1x) 1x, var(--atmos-band-2x) 2x);
+  background-image: image-set(var(--atmos-band-1x) 1x, var(--atmos-band-2x) 2x);
   background-size: cover;
   background-position: center;
   transform: scale(1.02);

@@ -1,4 +1,5 @@
-import ownerPhoto from '../images/LM_dental_2.jpeg';
+import ownerPhoto749 from '../images/optimized/LM_dental_2_800.jpg';
+import ownerPhoto1123 from '../images/optimized/LM_dental_2_1200.jpg';
 
 const credentials = [
   'Moderní a šetrné postupy',
@@ -47,9 +48,14 @@ function About() {
           <section className="about-owner" aria-label="Slovo majitelky">
             <img
               className="about-owner-photo"
-              src={ownerPhoto}
+              src={ownerPhoto749}
+              srcSet={`${ownerPhoto749} 749w, ${ownerPhoto1123} 1123w`}
+              sizes="(max-width: 900px) 70vw, 420px"
+              width="749"
+              height="800"
               alt="Markéta Lesinová"
               loading="lazy"
+              decoding="async"
             />
             <div className="about-owner-copy">
               <p className="about-owner-kicker">Slovo majitelky</p>

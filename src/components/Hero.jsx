@@ -1,11 +1,14 @@
-import heroLeft from '../images/LM_dental_HERO.jpeg';
-import heroRight from '../images/LM_dental_HERO2.jpeg';
-import heroCenter from '../images/LM_dental_HERO3.jpeg';
+import heroLeft600 from '../images/optimized/LM_dental_HERO_800.jpg';
+import heroLeft900 from '../images/optimized/LM_dental_HERO_1200.jpg';
+import heroRight600 from '../images/optimized/LM_dental_HERO2_800.jpg';
+import heroRight900 from '../images/optimized/LM_dental_HERO2_1200.jpg';
+import heroCenter600 from '../images/optimized/LM_dental_HERO3_800.jpg';
+import heroCenter900 from '../images/optimized/LM_dental_HERO3_1200.jpg';
 
 const heroPhotos = {
-  left: heroLeft,
-  right: heroRight,
-  center: heroCenter
+  left: { src: heroLeft600, srcSet: `${heroLeft600} 600w, ${heroLeft900} 900w` },
+  right: { src: heroRight600, srcSet: `${heroRight600} 600w, ${heroRight900} 900w` },
+  center: { src: heroCenter600, srcSet: `${heroCenter600} 600w, ${heroCenter900} 900w` }
 };
 
 function Hero({ onBook }) {
@@ -15,13 +18,41 @@ function Hero({ onBook }) {
         <div className="hero-collage">
           <div className="hero-triptych" aria-label="Fotky z ordinace">
             <figure className="hero-triptych-photo">
-              <img src={heroPhotos.left} alt="Dentální hygiena v ordinaci" />
+              <img
+                src={heroPhotos.left.src}
+                srcSet={heroPhotos.left.srcSet}
+                sizes="(max-width: 900px) 33vw, 260px"
+                width="600"
+                height="800"
+                alt="Dentální hygiena v ordinaci"
+                loading="lazy"
+                decoding="async"
+              />
             </figure>
             <figure className="hero-triptych-photo is-center">
-              <img src={heroPhotos.center} alt="Dentální hygiena v ordinaci" />
+              <img
+                src={heroPhotos.center.src}
+                srcSet={heroPhotos.center.srcSet}
+                sizes="(max-width: 900px) 33vw, 260px"
+                width="600"
+                height="800"
+                alt="Dentální hygiena v ordinaci"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
             </figure>
             <figure className="hero-triptych-photo">
-              <img src={heroPhotos.right} alt="Dentální hygiena v ordinaci" />
+              <img
+                src={heroPhotos.right.src}
+                srcSet={heroPhotos.right.srcSet}
+                sizes="(max-width: 900px) 33vw, 260px"
+                width="600"
+                height="800"
+                alt="Dentální hygiena v ordinaci"
+                loading="lazy"
+                decoding="async"
+              />
             </figure>
           </div>
         </div>

@@ -4,7 +4,7 @@ function Footer() {
       <div className="container footer-main">
         <div className="footer-brand-block">
           <a href="#home" aria-label="LM Dental" className="footer-logo-link">
-            <img src="/logo.png" alt="LM Dental" className="footer-logo" />
+            <img src="/logo.png" alt="LM Dental" className="footer-logo" width="192" height="128" decoding="async" />
           </a>
         </div>
 
@@ -28,7 +28,7 @@ function Footer() {
             rel="noopener noreferrer"
             aria-label="Otevrit adresu v Google Maps"
           >
-            Ringhofferova 422, Kamenice
+            Ringhofferova 422, Kamenice u Prahy
           </a>
         </div>
 
