@@ -22,7 +22,8 @@ const faqData = [
   },
   {
     question: 'Co si mám vzít s sebou?',
-    answer: 'Doporučujeme vlastní zubní pomůcky a případné doporučení od zubního lékaře, pokud jej máte.'
+    answer:
+      'Přineste si prosím své zubní pomůcky. Máte-li doporučení od zubního lékaře nebo RTG snímky, vezměte je s sebou také. Pomůže nám to lépe posoudit stav chrupu.'
   },
   {
     question: 'Přispívá na dentální hygienu pojišťovna?',
