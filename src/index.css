@@ -1008,8 +1008,8 @@ main {
 }
 
 .about-owner-photo {
-  width: 330px;
-  height: 330px;
+  width: 396px;
+  height: 396px;
   flex: 0 0 auto;
   border-radius: 1rem;
   object-fit: cover;
@@ -1043,7 +1043,7 @@ main {
   .about-owner-photo {
     width: 100%;
     max-width: 520px;
-    height: 420px;
+    height: 504px;
     border-radius: 0.9rem;
   }
 }
