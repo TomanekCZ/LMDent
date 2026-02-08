@@ -1,4 +1,4 @@
-import aboutPhoto from '../images/LM_dental_2.jpeg';
+import ownerPhoto from '../images/LM_dental_2.jpeg';
 
 const credentials = [
   'Moderní a šetrné postupy',
@@ -11,20 +11,12 @@ function About() {
   return (
     <section id="about" className="section section-about">
       <div className="container about-layout">
-        <figure className="about-photo animate-on-scroll">
-          <img
-            src={aboutPhoto}
-            alt="Ordinace dentální hygieny LM Dental"
-            loading="lazy"
-          />
-        </figure>
-
         <div className="about-content animate-on-scroll" style={{ transitionDelay: '120ms' }}>
           <p className="section-kicker">O nás</p>
           <h2>Profesionální péče, lidský přístup</h2>
 
           <blockquote>
-            „Mým cílem je vytvořit místo, kde se spojuje profesionální dentální péče s klidnou a příjemnou atmosférou
+            „Našim cílem je vytvořit místo, kde se spojuje profesionální dentální péče s klidnou a příjmenou atmosférou
             bez stresu.“
           </blockquote>
 
@@ -41,13 +33,6 @@ function About() {
           </p>
 
           <p className="about-paragraph about-paragraph-labeled">
-            <span className="about-label">Kdo vás přivítá</span>
-            Jmenuji se Markéta Lesinová a jsem zakladatelkou LM DENTAL. Jsem pečlivá, pozitivně naladěná dentální
-            hygienistka s několikaletou praxí a svou práci vnímám jako poslání. S radostí se věnuji dětem i dospělým a
-            zakládám si na individuálním, lidském přístupu.
-          </p>
-
-          <p className="about-paragraph about-paragraph-labeled">
             <span className="about-label">Prostředí a komfort</span>
             Pracuji v moderně vybavené ordinaci, která zajišťuje vysoký komfort i efektivitu ošetření. Mojí největší
             motivací je vaše důvěra, spokojenost a dlouhodobě zdravý úsměv. Těším se na osobní setkání.
@@ -58,6 +43,23 @@ function About() {
               <li key={item}>{item}</li>
             ))}
           </ul>
+
+          <section className="about-owner" aria-label="Slovo majitelky">
+            <img
+              className="about-owner-photo"
+              src={ownerPhoto}
+              alt="Markéta Lesinová"
+              loading="lazy"
+            />
+            <div className="about-owner-copy">
+              <p className="about-owner-kicker">Slovo majitelky</p>
+              <p className="about-owner-text">
+                Jmenuji se Markéta Lesinová a jsem zakladatelkou LM Dental. Jsem pečlivá, pozitivně naladěná dentální
+                hygienistka s několikaletou praxí a svou práci vnímám jako poslání. S radostí se věnuji dětem i dospělým
+                a zakládám si na individuálním, lidském přístupu.
+              </p>
+            </div>
+          </section>
         </div>
       </div>
     </section>

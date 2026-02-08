@@ -902,9 +902,11 @@ main {
 
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1fr;
   gap: 1.2rem;
   align-items: stretch;
+  max-width: 980px;
+  margin-inline: auto;
 }
 
 .about-photo {
@@ -976,7 +978,8 @@ main {
   padding: 0;
   margin: 1.05rem 0 0;
   display: grid;
-  gap: 0.54rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
 }
 
 .about-points li {
@@ -985,6 +988,64 @@ main {
   border-radius: 0.72rem;
   padding: 0.62rem 0.78rem;
   font-size: 0.83rem;
+}
+
+@media (max-width: 700px) {
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-owner {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: rgba(181, 145, 99, 0.1);
+  border: 1px solid rgba(181, 145, 99, 0.22);
+  border-radius: 1.1rem;
+  padding: 0.9rem;
+}
+
+.about-owner-photo {
+  width: 330px;
+  height: 330px;
+  flex: 0 0 auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  /* Bias framing slightly upward so the face is more likely visible. */
+  object-position: 50% 22%;
+  box-shadow: 0 18px 38px rgba(9, 14, 17, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.about-owner-kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.about-owner-text {
+  margin-top: 0.45rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 700px) {
+  .about-owner {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .about-owner-photo {
+    width: 100%;
+    max-width: 520px;
+    height: 420px;
+    border-radius: 0.9rem;
+  }
 }
 
 .section-pricing {
