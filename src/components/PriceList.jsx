@@ -89,6 +89,10 @@ function PriceList({ onBook }) {
           ))}
         </div>
 
+        <p className="pricing-note animate-on-scroll" style={{ transitionDelay: '190ms' }}>
+          Platbu je možné provést v hotovosti nebo pohodlně pomocí QR kódu.
+        </p>
+
         <div className="pricing-actions animate-on-scroll" style={{ transitionDelay: '220ms' }}>
           <button type="button" className="btn btn-primary" onClick={() => onBook?.()}>
             Objednat termín

@@ -1,6 +1,6 @@
 {
-  "name": "LM Dental",
-  "short_name": "LM Dental",
+  "name": "MyWebSite",
+  "short_name": "MySite",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#f8f4ef",
-  "background_color": "#f8f4ef",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone"
 }

@@ -1175,6 +1175,18 @@ main {
   text-align: center;
 }
 
+.pricing-note {
+  max-width: 920px;
+  margin: 1.1rem auto 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  background: rgba(181, 145, 99, 0.1);
+  border: 1px solid rgba(181, 145, 99, 0.28);
+  border-radius: 0.9rem;
+  padding: 0.85rem 1rem;
+  text-align: center;
+}
+
 .section-faq {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.36));
 }
