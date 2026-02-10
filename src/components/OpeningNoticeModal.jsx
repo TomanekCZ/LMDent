@@ -58,7 +58,7 @@ function OpeningNoticeModal({ open, onClose }) {
           </button>
         </div>
 
-        <div className="notice-body">
+        <div className="notice-body" role="document">
           <h2 className="notice-title">Otevíráme dentální hygienu</h2>
           <p className="notice-lead">
             Připravujeme novou dentální hygienu v Kamenici u Prahy. Jakmile budeme mít přesný termín otevření a
